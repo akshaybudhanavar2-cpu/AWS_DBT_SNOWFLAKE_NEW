@@ -1,0 +1,42 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+version: 2
+
+sources:
+  - name: learnsnow
+    database: LEARNING_SNOW
+    schema: LEARNSNOW
+    tables:
+      - name: ORDERS
+      - name: CUSTOMERS
+      - name: aws_data_load
+      - name: demo
+      - name: dyn_agg_customer_data
+      - name: dyn_aws_data_load
+      - name: dyn_raw_customer_data
+      - name: load_csv_second_table
+      - name: load_data_csv_table
+      - name: load_parquet_table
+      - name: my_ext_table
+      - name: pokemon_table
+      - name: s3_to_snow_ext_table
