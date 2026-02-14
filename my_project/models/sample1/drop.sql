@@ -1,1 +1,0 @@
-drop schema learnsnow_sample1_schema cascade;
