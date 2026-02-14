@@ -1,14 +1,13 @@
 with testing_ref as (
-  select value:c1::string as c1_value,
-         value:c2::string as c2_value,
-         value:c3::string as c3_value,
-         value:c4::string as c4_value,
-         value:c5::string as c5_value,
-         value:c6::string as c6_value,
-         value:c7::string as c7_value,
-         value:c8::string as c8_value,
-         pokemon,
-         type
+  select value:c1::string as POKEMON,
+         value:c2::string as Colour,
+         value:c3::string as Type,
+         value:c4::Date as Create_Date,
+         value:c5::string as weight,
+         value:c6::string as Attack,
+         value:c7::string as Yeild_Type,
+         value:c8::string as Yeild,
+        {{ get_strength_category('value:c6::string') }} as Strength_Category
   from {{ ref('DBT_tesing1') }}
 )
 select * from testing_ref
