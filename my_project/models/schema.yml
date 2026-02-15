@@ -1,0 +1,32 @@
+version: 2
+models:
+  - name: testing_ref
+    description: "This is a sample model for testing purposes."
+    columns:
+      - name: value
+        tests:
+          - not_null
+          - unique
+      - name: colour
+        tests:
+          - not_null
+          - unique
+      - name: Create_Date
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['2021-01-01', '2021-12-31']
+  - name: flatten_parquet_source
+    columns:
+      - name: year
+        tests:
+          - not_null
+      - name: biofuel_electricity
+        tests:
+          - not_null
+      - name: coal_electricity
+        tests:
+          - not_null
+      - name: solar_electricity
+        tests:
+          - not_null

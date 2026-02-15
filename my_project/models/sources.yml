@@ -18,3 +18,4 @@ sources:
       - name: my_ext_table
       - name: pokemon_table
       - name: s3_to_snow_ext_table
+      - name: json_array_table
